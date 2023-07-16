@@ -2,28 +2,29 @@
 /* home.css */
 @font-face {
   font-family: 'Alcubierre';
-  src: url('/font/Alcubierre-2.otf') format('woff2');
+  src: url('font/Alcubierre-2.otf') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Montbold';
-  src: url('/font/Montserrat-Bold-3.otf') format('woff2');
+  src: url('font/Montserrat-Bold-3.otf') format('woff2');
 
 }
 @font-face {
   font-family: 'Montserrat';
-  src: url('/font/Montserrat-Light-6.otf') format('woff2');
+  src: url('font/Montserrat-Light-6.otf') format('woff2');
 }
 @font-face {
   font-family: 'Montlight';
-  src: url('/font/Montserrat-ExtraLight-5.otf') format('woff2');
+  src: url('font/Montserrat-ExtraLight-5.otf') format('woff2');
 }
 body {
   background-color: white;
   margin: 0;
   padding: 0;
+  
 }
 nav {
   margin-top: 2%;
@@ -34,17 +35,66 @@ nav {
   align-items: center;
 }
 
-.name {
-  margin-left: 5%;
-  font-size: 30px;
-  text-decoration: none; /* 移除下划线 */ 
-  font-family: "montbold", Arial, sans-serif;
-  color: #151311;
-  letter-spacing: 1px;
+
+.headtitle {
+  margin-left: 10%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
+.square {
+  width: 15px;
+  height: 15px;
+  background-color: #000000;
+  margin-right: 10px;
+  transition: 1s;
+}
+
+.headtitle:hover .square {
+  transform: rotate(180deg);
+}
+
+
+
+.name-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.name {
+  font-size: 170%;
+  width: 120px;
+  font-family: "montbold", Arial, sans-serif;
+  color: #000000;
+  margin-right: 5px;
+}
+
+.topthinname {
+  font-family: "montlight";
+  font-size: 120%;
+  letter-spacing: 3px;
+  margin-left: 3%;
+}
+
+.itembox {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+
 .items {
+
   margin-right: 5%;  
+  font-family: "montserrat";
 }
 
 .items a {
@@ -56,7 +106,7 @@ nav {
 }
 
 .items a:hover {
-  color: #6d533f;
+  color: #846a56;
   font-weight: lighter;
 }
 .bg-1 {
@@ -74,8 +124,9 @@ nav {
   display: inline-block;
   justify-content: center;
   align-items: center;
-  margin-top: 50%;
-  margin-left: 25%;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
   width: 50%;
   height: 50%;
   /* background-color: #151311; */
@@ -99,7 +150,7 @@ nav {
   box-shadow: 0 2px 50px rgba(0, 0, 0, 0.2);
 }
 .round-image {
-  margin-top: 10%;
+  margin-top: 15%;
   height: 35%;
   border-radius: 50%;
 }
@@ -109,7 +160,22 @@ nav {
   font-size: 30px;
   letter-spacing: 1px;
   margin-top: 10%;
+  margin-bottom: 10px;
 }
+.thinname{
+  font-family: "montlight";
+  font-size: 150%;
+  letter-spacing: 3px;
+  margin-top: 7%;
+}
+.thinbirth{
+  top: 0;
+  font-family: "montlight";
+  font-size: 100%;
+  letter-spacing: 5px;
+  margin-top: 5%;
+}
+
 .line{
   margin: 0 auto;
   margin-top: 5%;
@@ -119,6 +185,94 @@ nav {
   border-radius: 20%;
   transition: width 0.8s;
 }
+
+.rightinfo{
+  padding-top: 0%;
+  padding-left: 5%;
+  left: 40%;
+  height: 100%;
+  width: 60%; 
+  position: absolute;
+  display: inline-block;
+  justify-content: center;
+  align-items: left;
+  text-align: left;
+}
+
+.greet{
+  
+  font-family: "montbold";
+  font-size: 80px;
+  line-height: 10px;
+}
+.greettext{
+  font-family: "montserrat";
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin-bottom: 45px;
+  margin-left: 5px;
+}
+.buttons{
+  margin-left: 3px;
+  font-family: "montlight";
+  display: flex;
+  text-align: center;
+  color: aliceblue;
+  text-decoration: none;
+}
+.resume{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #412f21;
+  text-align: center;
+  color: rgb(255, 251, 240);
+  margin-right: 10px;
+  border-radius: 20px;
+  width: 130px;
+  height: 40px;
+  transition: 0.7s;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+.resume:hover{
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+}
+
+.proj{
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8a5d35;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  margin-right: 10px;
+  border-radius: 20px;
+  width: 130px;
+  height: 40px;
+  transition: 0.7s;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+.proj:hover{
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+}
+.detail{
+  margin-top: 7%;
+  font-family: "montlight";
+  font-size: 120%;
+  letter-spacing: 1px;
+  margin-bottom: 45px;
+  margin-left: 5px;
+}
+.buttons a {
+  text-decoration: none;
+}
+
+.buttons a:hover {
+  text-decoration: none;
+}
+
+
 .card:hover .line{
   width: 40%;
 }
@@ -149,7 +303,8 @@ nav {
   flex-direction: column;
   justify-self: center;
   align-items: center;
-  right: 5%;
+  left: 0px;
+  right: 10%;
   width: 15%;
 
 }
@@ -171,6 +326,7 @@ nav {
 }
 .logos {
   display: flex;
+  text-decoration: none; /* 移除下划线 */
   justify-content: center; /* 将logo水平居中对齐 */
   color: black; /* 设置为黑色字体 */
 }
@@ -179,4 +335,7 @@ nav {
   margin: 0 10px; /* 添加一些水平间距，可以根据需要调整 */
   color: black; /* 设置为黑色字体 */
   font-size: 20px;
+}
+.space{
+  width: 5%;
 }
