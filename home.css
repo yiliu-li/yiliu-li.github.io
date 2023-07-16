@@ -2,23 +2,23 @@
 /* home.css */
 @font-face {
   font-family: 'Alcubierre';
-  src: url('font/Alcubierre-2.otf') format('woff2');
+  src: url('/font/Alcubierre-2.otf') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Montbold';
-  src: url('font/Montserrat-Bold-3.otf') format('woff2');
+  src: url('/font/Montserrat-Bold-3.otf') format('woff2');
 
 }
 @font-face {
   font-family: 'Montserrat';
-  src: url('font/Montserrat-Light-6.otf') format('woff2');
+  src: url('/font/Montserrat-Light-6.otf') format('woff2');
 }
 @font-face {
   font-family: 'Montlight';
-  src: url('font/Montserrat-ExtraLight-5.otf') format('woff2');
+  src: url('/font/Montserrat-ExtraLight-5.otf') format('woff2');
 }
 body {
   background-color: white;
