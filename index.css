@@ -10,7 +10,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: linear-gradient(45deg, #103450, #1b304d, #043649, #152f29);
+    background: linear-gradient(45deg, rgb(224,209,195), rgb(241,231,224), rgb(224,211,201), rgb(248,242,239));
     background-size: 600% 600%;
     animation: gradientAnimation 20s ease infinite;
     font-family: "Big John";
