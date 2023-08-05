@@ -140,7 +140,7 @@ a {
   flex-direction: column;
   align-items: center;
   top: 10%; 
-  bottom: -169%;
+  bottom: -180%;
   width: 100%; 
   
 }
@@ -178,7 +178,7 @@ a {
   height: 100%;
   width: 40%;
   margin-right: 0;
-  background-color: rgb(187, 0, 0);
+  background-color: rgba(231, 195, 156, 0.7);
 }
 .image-1{
   right: 0;
@@ -190,6 +190,7 @@ a {
 }
 .block{
   margin-top: 100px;
+  overflow: hidden;
   position: relative;
   display: flex;
   flex-direction: row;
