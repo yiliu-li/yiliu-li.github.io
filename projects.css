@@ -41,9 +41,29 @@ nav {
 
 .headtitle {
   margin-left: 10%;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  margin-bottom: 20px;
+  top: 20px;
+}
+
+nav{
+  margin-top: 25px;
+  height: 50px;
+
+}
+.headtitle:hover.square{
+  transform: rotate(180deg);
+}
+.contents:hover.square2{
+  transform: rotate(180deg);
+}
+
+.name:hover.square2{
+  transform: rotate(180deg);
+}
+
+.headtitle:hover .square {
+  transform: rotate(180deg);
 }
 
 .square {
@@ -76,12 +96,18 @@ nav {
   align-items: center;
 }
 
+.name-wrapper {
+  display: flex;
+  align-items: center;
+}
+
 .name {
   font-size: 170%;
   width: 120px;
   font-family: "montbold", Arial, sans-serif;
   color: #000000;
   letter-spacing: 2px;
+  margin-right: 5px;
 }
 
 
@@ -171,7 +197,7 @@ a {
   text-align: center;
   line-height: 200%;
   float: left;
-  width: 40%;
+  width: 650px;
 }
 .image{
   right: 0;
@@ -197,7 +223,7 @@ a {
   align-items: flex-start; /* 垂直居中 */
   left: 0;
   right: 0;
-  width: 80%;
+  width: 800px;
   height: 400px;
   background-color: white;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
@@ -219,26 +245,31 @@ a {
 }
 
 .title-name{
+  margin-top: 10px;
   display: inline-block;
+  padding-left: 20px;
   margin-left: 2%;
-  height: 80%;
+  height: 60px;
   width: 100%;
-  line-height: 50%;
+  line-height: 20px;
+  color: #412f21;
   /* background-color: aqua; */
 }
 .title{
-  margin-top: 8%;
+  margin-top: 23px;
   margin-left: 5%;
   width: 95%;
-  display: flex;
   font-family: "montbold";
-  font-size: 23px;
-  letter-spacing: 1px;
+  font-size: 20px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
   margin-bottom: 5%;
 }
 .sub-title-name{
-  font-size: 15px;
+  font-size: 18px;
   line-height: 20px;
+  letter-spacing: 1px;
+  width: 400px;
   font-family: "montserrat";
 }
 .square3 {
@@ -270,26 +301,28 @@ a {
 
 
 
+
+
 .bottom_detail {
   position: absolute;
   display: flex;
   justify-content: space-between;
   width: 100%;
   background-color: white;
-  height: 15%;
+  height: 130px;
   padding-top: 3%;
   bottom: 0;
-  margin-bottom: -110%; 
+  margin-bottom: -1800px; 
 }
 .copyright{
+  margin-top: 40px;
   float: left;
   font-family: Alcubierre;
   margin-left: 5%;
   letter-spacing: 2px;
-  top: 50%;
-  width: 30%;
+  width: 800px;
   font-size: 20px;
-  bottom: 50%;
+  bottom: 30%;
   text-align: left;
 }
 .bottom-box{
@@ -298,9 +331,8 @@ a {
   flex-direction: column;
   justify-self: center;
   align-items: center;
-  left: 0px;
-  right: 10%;
-  width: 15%;
+  right: 0px;
+  width: 400px;
 
 }
 .bottom-title{
