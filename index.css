@@ -38,9 +38,15 @@ nav {
 
 .headtitle {
   margin-left: 10%;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  margin-bottom: 20px;
+  top: 20px;
+}
+
+nav{
+  margin-top: 25px;
+  height: 50px;
+
 }
 
 .square {
@@ -96,7 +102,7 @@ a {
 
 
 .items {
-
+  top: 10px;
   margin-right: 5%;  
   font-family: "montserrat";
 }
@@ -309,15 +315,15 @@ a {
   justify-content: space-between;
   width: 100%;
   top: 85%;
-  bottom: 5%;
+
 }
 .copyright{
   float: left;
   font-family: Alcubierre;
-  margin-left: 5%;
-  margin-top: 3%;
+  margin-left: 50px;
+  margin-top: 50px;
   letter-spacing: 2px;
-  width: 30%;
+  width: 1000px;
   font-size: 20px;
   bottom: 50%;
   text-align: left;
@@ -328,9 +334,9 @@ a {
   flex-direction: column;
   justify-self: center;
   align-items: center;
-  left: 0px;
-  right: 10%;
-  width: 15%;
+  margin-right: 80px;
+  width: 100px;
+
 
 }
 .bottom-title{
@@ -346,6 +352,7 @@ a {
   color: black; /* 设置为黑色字体 */
   font-weight: 100px;
   text-align: center;
+  width: 200px;
   font-size: 15px;
 
 }
@@ -363,4 +370,117 @@ a {
 }
 .space{
   width: 5%;
+}
+
+
+@media (min-width: 0px) and (max-width:768px) {
+
+  .logos a {
+    margin: 0 10px; /* 添加一些水平间距，可以根据需要调整 */
+    color: black; /* 设置为黑色字体 */
+    font-size: 25px;
+  }
+
+
+.bar{
+  align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  height: 70px;
+  font-size: 100px;
+  letter-spacing: 5px;
+}
+
+
+.round-image {
+  margin-top: 50px;
+  height: 200px;
+  border-radius: 50%;
+}
+.cardname{
+  top: 0;
+  font-family: "montbold";
+  font-size: 45px;
+  letter-spacing: 5px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.thinname{
+  font-family: "montlight";
+  font-size: 35px;
+  letter-spacing: 5px;
+  margin-top: 7%;
+}
+.thinbirth{
+  top: 0;
+  font-family: "montlight";
+  font-size: 80%;
+  letter-spacing: 5px;
+  margin-top: 5%;
+}
+
+.line{
+  margin: 0 auto;
+  margin-top: 30px;
+  height: 1px;
+  width: 50%;
+  background-color: rgb(35, 28, 20);
+  border-radius: 20%;
+
+}
+
+
+  .bg-1 {
+    background-color: rgb(228, 218, 207);
+    position: absolute;
+    display: block;
+    align-items: center; /* 垂直居中 */
+    top: 10%; 
+    bottom: 15%;
+    left: 0;
+    width: 100%;
+  
+  }
+
+  .card{
+    position: relative;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 10%;
+    
+    background-color: rgba(243, 236, 231, 1);
+    height: 600px;
+    width: 80%; 
+    /* margin-right: 50%; */
+    z-index: 1;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+  }
+  
+  .column1{
+    display: block;
+    height: 1000px;
+  }
+
+
+  .contents{
+
+    top: 10%;
+    background-color: aqua;
+  }
+
+  .rightinfo{
+
+
+    background-color: aqua;
+  }
+
 }
