@@ -228,6 +228,37 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
+    // Enhanced Contact Links
+    const setupContactLinks = () => {
+        const contactLinks = document.querySelectorAll('.contact-info a');
+        
+        contactLinks.forEach(link => {
+            // Add touch feedback
+            link.addEventListener('touchstart', () => {
+                link.classList.add('touch-active');
+            }, { passive: true });
+            
+            link.addEventListener('touchend', () => {
+                link.classList.remove('touch-active');
+            }, { passive: true });
+
+            // Add click feedback
+            link.addEventListener('click', (e) => {
+                const href = link.getAttribute('href');
+                if (href && href.startsWith('tel:')) {
+                    // For mobile devices, let the default behavior handle phone calls
+                    return;
+                }
+                if (href && href.startsWith('mailto:')) {
+                    // For mobile devices, let the default behavior handle emails
+                    return;
+                }
+                e.preventDefault();
+                window.open(href, '_blank');
+            });
+        });
+    };
+
     // Initialize all features
     createScrollProgress();
     setupCardHoverEffect();
@@ -236,6 +267,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupNavbarScroll();
     setupSectionHeaders();
     setupSkillTags();
+    setupContactLinks();
 
     // Mobile setup
     if (window.innerWidth <= 768) {

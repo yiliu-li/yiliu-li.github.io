@@ -412,12 +412,54 @@ button:focus {
     margin-bottom: 2rem;
 }
 
-.contact-info p {
+.contact-info a {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     color: var(--text-color);
     font-size: 1rem;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s var(--transition-timing);
+    background-color: transparent;
+    will-change: transform, border-color, background-color;
+}
+
+.contact-info a:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.contact-info a:active {
+    transform: translateY(0);
+}
+
+.contact-info i {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    transition: transform 0.3s var(--transition-timing);
+}
+
+.contact-info a:hover i {
+    transform: scale(1.1);
+}
+
+/* Touch Feedback for Contact Links */
+@media (hover: none) {
+    .contact-info a.touch-active {
+        background-color: rgba(0, 0, 0, 0.05);
+        transform: scale(0.98);
+    }
+}
+
+/* Focus States for Contact Links */
+.contact-info a:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--primary-color);
+    border-color: var(--primary-color);
 }
 
 .social-links {
