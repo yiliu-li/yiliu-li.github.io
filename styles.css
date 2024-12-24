@@ -1022,3 +1022,32 @@ button:focus {
     outline: none;
     box-shadow: 0 0 0 2px var(--primary-color);
 } 
+
+.interests {
+    font-size: 1.1rem;
+    color: var(--accent-color);
+    margin-bottom: 2rem;
+    font-weight: 500;
+    opacity: 0;
+    animation: fadeIn 0.8s ease 0.3s forwards;
+}
+
+.interests::before {
+    content: '{ ';
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.interests::after {
+    content: ' }';
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .interests {
+        font-size: 0.95rem;
+        padding: 0 1rem;
+        line-height: 1.6;
+    }
+} 
