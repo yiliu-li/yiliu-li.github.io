@@ -1027,33 +1027,28 @@ button:focus {
 .project-links {
     display: flex;
     gap: 1rem;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 
 .project-links a {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
     font-size: 0.9rem;
     color: var(--primary-color);
     text-decoration: none;
     font-weight: 500;
     padding: 0.5rem 1rem;
-    border-radius: var(--border-radius);
     border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
     transition: all 0.3s var(--transition-timing);
     background-color: transparent;
-    will-change: transform, border-color, background-color;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .project-links a:hover {
     border-color: var(--primary-color);
     transform: translateY(-2px);
     background-color: rgba(0, 0, 0, 0.02);
-}
-
-.project-links a:active {
-    transform: translateY(0);
 }
 
 .project-links a::after {
@@ -1065,13 +1060,11 @@ button:focus {
 
 .project-links a:hover::after {
     opacity: 1;
-    transform: translateX(5px);
+    transform: translateX(0);
 }
 
-/* Touch Feedback for Project Links */
 @media (hover: none) {
-    .project-links a.touch-active {
-        background-color: rgba(0, 0, 0, 0.05);
+    .project-links a:active {
         transform: scale(0.98);
     }
 }
@@ -1081,16 +1074,4 @@ button:focus {
     outline: none;
     box-shadow: 0 0 0 2px var(--primary-color);
     border-color: var(--primary-color);
-}
-
-/* Mobile Adjustments for Project Links */
-@media (max-width: 768px) {
-    .project-links {
-        flex-direction: column;
-    }
-    
-    .project-links a {
-        width: 100%;
-        justify-content: center;
-    }
 } 
