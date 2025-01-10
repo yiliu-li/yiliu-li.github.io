@@ -352,6 +352,38 @@ button:focus {
     font-weight: 600;
     color: var(--primary-color);
     letter-spacing: -0.5px;
+    position: relative;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: all 0.3s var(--transition-timing);
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s var(--transition-timing);
+    z-index: -1;
+}
+
+.logo:hover {
+    color: var(--background-color);
+    transform: translateY(-2px);
+}
+
+.logo:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.logo:active {
+    transform: translateY(0);
 }
 
 .nav-links {
