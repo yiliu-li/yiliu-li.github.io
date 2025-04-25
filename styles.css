@@ -1359,8 +1359,8 @@ button:focus {
 }
 
 .institution-icon {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     overflow: hidden;
     opacity: 0.8;
 }
@@ -1377,6 +1377,20 @@ button:focus {
     opacity: 0.8;
     transform: none;
     box-shadow: none;
+}
+
+@media (max-width: 992px) {
+    .institution-icon {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .institution-icon {
+        width: 45px;
+        height: 45px;
+    }
 }
 
 @media (max-width: 768px) {
