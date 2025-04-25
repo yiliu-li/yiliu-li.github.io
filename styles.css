@@ -101,15 +101,10 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(
-        circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-        rgba(0, 0, 0, 0.03) 0%,
-        transparent 50%
-    );
+    background: rgba(0, 0, 0, 0.01);
     opacity: 0;
-    transition: opacity 0.3s var(--transition-timing);
+    transition: opacity 0.3s ease;
     pointer-events: none;
-    will-change: opacity;
 }
 
 .education-card:hover::before,
@@ -665,8 +660,8 @@ button:focus {
 
 .supervisor {
     position: absolute;
-    top: 2rem;
-    right: 2rem;
+    top: 0.5rem;
+    right: 0.5rem;
     font-size: 0.9rem;
     color: var(--accent-color);
     font-weight: 500;
@@ -710,6 +705,25 @@ button:focus {
     font-size: 1rem;
     font-weight: 500;
     margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.location-inline {
+    font-size: 0.85rem;
+    color: var(--accent-color);
+    margin-left: 0.75rem;
+    font-weight: normal;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.location-inline:before {
+    content: "•";
+    position: absolute;
+    left: 0.25rem;
+    color: var(--border-color);
 }
 
 .experience-card .date {
@@ -813,6 +827,10 @@ footer {
         margin: 1rem 0;
         justify-content: flex-end;
     }
+
+    .hero {
+        padding-top: 6rem;
+    }
 } 
 
 /* Enhanced Interactions */
@@ -884,8 +902,7 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at var(--mouse-x, center) var(--mouse-y, center), 
-                rgba(0, 0, 0, 0.03) 0%, transparent 50%);
+    background: rgba(0, 0, 0, 0.01);
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
@@ -1026,38 +1043,6 @@ html {
 .contact-info p:hover {
     border-color: var(--border-color);
     transform: translateY(-2px);
-}
-
-/* Animations */
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
 }
 
 /* Mobile Menu Enhancement */
@@ -1241,28 +1226,6 @@ button:focus {
 }
 
 /* Enhanced Hero Animations */
-@keyframes fadeInDown {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 .hero h1 {
     animation: fadeInDown 0.5s var(--transition-smooth) forwards;
 }
@@ -1328,55 +1291,106 @@ button:focus {
     font-style: normal;
 }
 
-.logo {
-    font-family: 'SanJiHuaChao', sans-serif;
-    font-size: 1.75rem;
-    font-weight: normal;
-    color: var(--primary-color);
-    position: relative;
-    cursor: pointer;
-    padding: 0.5rem;
-    transition: all 0.3s var(--transition-timing);
-}
-
-.logo::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--primary-color);
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.3s var(--transition-timing);
-    z-index: -1;
-}
-
-.logo:hover {
-    color: var(--background-color);
-    transform: translateY(-2px);
-}
-
-.logo:hover::before {
-    transform: scaleX(1);
-    transform-origin: left;
-}
-
-.logo:active {
-    transform: translateY(0);
-}
-
+/* Keeping only one definition of looking-for styles */
 .looking-for {
     font-size: 0.95rem;
     color: var(--accent-color);
-    margin-bottom: 1rem;
-    font-style: italic;
+    margin: 0.75rem auto 1.75rem;
     letter-spacing: 0.01em;
-    opacity: 0.85;
-    transition: opacity 0.3s var(--transition-smooth);
+    opacity: 0;
+    animation: fadeInUp 0.5s var(--transition-smooth) 0.25s forwards;
+    position: relative;
+    padding: 0.5rem 0;
+    font-weight: 500;
+    display: inline-block;
+    transform: translateY(0);
+    transition: all 0.3s var(--transition-smooth);
+    border-bottom: 1px solid transparent;
+}
+
+.looking-for i {
+    margin-right: 0.5rem;
+    color: var(--primary-color);
+    font-size: 0.85rem;
 }
 
 .looking-for:hover {
-    opacity: 1;
+    color: var(--primary-color);
+    transform: translateY(-1px);
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.upcoming-note {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+    margin-top: 0.25rem;
+    background-color: rgba(0, 0, 0, 0.02);
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--border-color);
+}
+
+.card-content {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+.main-content {
+    flex: 1;
+    width: calc(100% - 100px); /* Leave space for icon */
+}
+
+.side-content {
+    width: 90px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-left: 10px;
+}
+
+.institution-icon {
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    opacity: 0.8;
+}
+
+.institution-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Remove all hover effects */
+.education-card:hover .institution-icon,
+.experience-card:hover .institution-icon {
+    opacity: 0.8;
+    transform: none;
+    box-shadow: none;
+}
+
+@media (max-width: 768px) {
+    .card-content {
+        flex-wrap: wrap;
+    }
+    
+    .main-content {
+        width: 100%;
+    }
+    
+    .side-content {
+        width: 100%;
+        justify-content: flex-end;
+        padding-top: 15px;
+    }
 } 

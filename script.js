@@ -19,30 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Optimized Card Hover Effect with debounce
     const setupCardHoverEffect = () => {
+        // Removed mouse tracking effect
         const cards = document.querySelectorAll('.education-card, .experience-card, .project-card, .skill-category');
-        let rafId = null;
-
-        cards.forEach(card => {
-            card.addEventListener('mousemove', (e) => {
-                if (rafId) cancelAnimationFrame(rafId);
-                
-                rafId = requestAnimationFrame(() => {
-                    const rect = card.getBoundingClientRect();
-                    const x = ((e.clientX - rect.left) / card.clientWidth) * 100;
-                    const y = ((e.clientY - rect.top) / card.clientHeight) * 100;
-                    
-                    card.style.setProperty('--mouse-x', `${x}%`);
-                    card.style.setProperty('--mouse-y', `${y}%`);
-                });
-            });
-
-            // Reset effect on mouse leave
-            card.addEventListener('mouseleave', () => {
-                if (rafId) cancelAnimationFrame(rafId);
-                card.style.setProperty('--mouse-x', '50%');
-                card.style.setProperty('--mouse-y', '50%');
-            });
-        });
+        // Keep the fade effect only, no cursor tracking
     };
 
     // Enhanced Intersection Observer for Fade In
