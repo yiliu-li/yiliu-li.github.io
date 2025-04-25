@@ -1365,4 +1365,18 @@ button:focus {
 
 .logo:active {
     transform: translateY(0);
+}
+
+.looking-for {
+    font-size: 0.95rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    font-style: italic;
+    letter-spacing: 0.01em;
+    opacity: 0.85;
+    transition: opacity 0.3s var(--transition-smooth);
+}
+
+.looking-for:hover {
+    opacity: 1;
 } 
