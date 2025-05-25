@@ -56,18 +56,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Optimized Mobile Menu
     const setupMobileMenu = () => {
-        const hamburger = document.createElement('div');
-        hamburger.className = 'hamburger';
-        hamburger.innerHTML = `
-            <span></span>
-            <span></span>
-            <span></span>
-        `;
-
-        const nav = document.querySelector('.nav-content');
+        const hamburger = document.querySelector('.hamburger');
         const navLinks = document.querySelector('.nav-links');
         
-        nav.insertBefore(hamburger, nav.firstChild);
+        if (!hamburger || !navLinks) return;
 
         // Add touch feedback
         const addTouchFeedback = (element) => {
@@ -247,11 +239,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupSectionHeaders();
     setupSkillTags();
     setupContactLinks();
-
-    // Mobile setup
-    if (window.innerWidth <= 768) {
-        setupMobileMenu();
-    }
+    setupMobileMenu();
 
     // Optimized window resize handler
     let resizeTimer;
@@ -259,17 +247,16 @@ document.addEventListener('DOMContentLoaded', () => {
         if (resizeTimer) clearTimeout(resizeTimer);
         
         resizeTimer = setTimeout(() => {
-            if (window.innerWidth <= 768) {
-                if (!document.querySelector('.hamburger')) {
-                    setupMobileMenu();
+            // Reset mobile menu state on resize
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (hamburger && navLinks) {
+                if (window.innerWidth > 768) {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                    document.body.classList.remove('menu-open');
                 }
-            } else {
-                const hamburger = document.querySelector('.hamburger');
-                if (hamburger) {
-                    hamburger.remove();
-                }
-                document.querySelector('.nav-links').classList.remove('active');
-                document.body.classList.remove('menu-open');
             }
         }, 150);
     }, { passive: true });

@@ -1397,7 +1397,7 @@ button:focus {
     .card-content {
         flex-wrap: wrap;
     }
-    
+
     .main-content {
         width: 100%;
     }
@@ -1406,5 +1406,117 @@ button:focus {
         width: 100%;
         justify-content: flex-end;
         padding-top: 15px;
+    }
+} 
+
+/* Personal page specific styles */
+.project-card h3 i {
+    margin-right: 0.5rem;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.project-card h3 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+/* Logo clickable cursor */
+.logo {
+    cursor: pointer;
+}
+
+/* Active navigation link styling */
+.nav-links a.active {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.nav-links a.active::after {
+    width: 100%;
+}
+
+/* Enhanced mobile menu for personal page */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--background-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: right 0.3s var(--transition-timing);
+        will-change: right;
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+        margin: 1rem 0;
+        opacity: 0;
+        transform: translateX(20px);
+        transition: transform 0.4s var(--transition-spring),
+                   opacity 0.3s var(--transition-smooth);
+        will-change: transform, opacity;
+    }
+
+    .nav-links.active a {
+        opacity: 1;
+        transform: translateX(0);
+        transition-delay: 0.2s;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        width: 30px;
+        height: 20px;
+        position: relative;
+        z-index: 1002;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: var(--primary-color);
+        position: absolute;
+        transition: transform 0.4s var(--transition-spring),
+                   opacity 0.3s var(--transition-smooth);
+        will-change: transform, opacity;
+    }
+
+    .hamburger span:first-child {
+        top: 0;
+    }
+
+    .hamburger span:nth-child(2) {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .hamburger span:last-child {
+        bottom: 0;
+    }
+
+    .hamburger.active span:first-child {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:last-child {
+        transform: translateY(-9px) rotate(-45deg);
     }
 } 
