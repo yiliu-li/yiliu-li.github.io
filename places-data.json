@@ -1,0 +1,526 @@
+{
+  "countries": [
+    {
+      "name": "China",
+      "continent": "Asia",
+      "states": [
+        {
+          "name": "Guangdong Province",
+          "lat": 23.1291,
+          "lng": 113.2644,
+          "cities": []
+        },
+        {
+          "name": "Shanghai",
+          "lat": 31.2304,
+          "lng": 121.4737,
+          "cities": []
+        },
+        {
+          "name": "Beijing",
+          "lat": 39.9042,
+          "lng": 116.4074,
+          "cities": []
+        },
+        {
+          "name": "Xinjiang",
+          "lat": 43.7930,
+          "lng": 87.6177,
+          "cities": []
+        },
+        {
+          "name": "Xizang (Tibet)",
+          "lat": 29.6520,
+          "lng": 91.1721,
+          "cities": []
+        },
+        {
+          "name": "Sichuan",
+          "lat": 30.6171,
+          "lng": 102.7103,
+          "cities": []
+        },
+        {
+          "name": "Hunan",
+          "lat": 27.6104,
+          "lng": 111.7088,
+          "cities": []
+        },
+        {
+          "name": "Hainan",
+          "lat": 19.1959,
+          "lng": 109.7453,
+          "cities": []
+        },
+        {
+          "name": "Zhejiang",
+          "lat": 29.1832,
+          "lng": 120.0934,
+          "cities": []
+        },
+        {
+          "name": "Inner Mongolia",
+          "lat": 44.3408,
+          "lng": 117.3616,
+          "cities": []
+        },
+        {
+          "name": "Fujian",
+          "lat": 26.0745,
+          "lng": 117.9874,
+          "cities": []
+        },
+        {
+          "name": "Jiangsu",
+          "lat": 32.9711,
+          "lng": 119.4550,
+          "cities": []
+        },
+        {
+          "name": "Guangxi",
+          "lat": 23.8298,
+          "lng": 108.7881,
+          "cities": []
+        },
+        {
+          "name": "Hong Kong",
+          "lat": 22.3193,
+          "lng": 114.1694,
+          "cities": []
+        },
+        {
+          "name": "Macau",
+          "lat": 22.1987,
+          "lng": 113.5439,
+          "cities": []
+        },
+        {
+          "name": "Taipei",
+          "lat": 25.0330,
+          "lng": 121.5654,
+          "cities": []
+        },
+        {
+          "name": "Kaohsiung",
+          "lat": 22.6273,
+          "lng": 120.3014,
+          "cities": []
+        },
+        {
+          "name": "Chiayi",
+          "lat": 23.4801,
+          "lng": 120.4491,
+          "cities": []
+        },
+        {
+          "name": "Ali Mountain",
+          "lat": 23.5081,
+          "lng": 120.8133,
+          "cities": []
+        },
+        {
+          "name": "Yunnan",
+          "lat": 25.0406,
+          "lng": 101.8431,
+          "cities": []
+        },
+        {
+          "name": "Qinghai",
+          "lat": 35.7452,
+          "lng": 96.4077,
+          "cities": []
+        },
+        {
+          "name": "Jiangxi",
+          "lat": 27.6140,
+          "lng": 115.9082,
+          "cities": []
+        }
+      ]
+    },
+    {
+      "name": "United States",
+      "continent": "North America",
+      "states": [
+        {
+          "name": "California",
+          "lat": 36.7783,
+          "lng": -119.4179,
+          "cities": []
+        },
+        {
+          "name": "Nevada",
+          "lat": 38.8026,
+          "lng": -116.4194,
+          "cities": []
+        },
+        {
+          "name": "Florida",
+          "lat": 27.7663,
+          "lng": -81.6868,
+          "cities": []
+        },
+        {
+          "name": "New York",
+          "lat": 40.7589,
+          "lng": -73.9851,
+          "cities": []
+        },
+        {
+          "name": "New Jersey",
+          "lat": 40.0583,
+          "lng": -74.4057,
+          "cities": []
+        },
+        {
+          "name": "Washington DC",
+          "lat": 38.9072,
+          "lng": -77.0369,
+          "cities": []
+        },
+        {
+          "name": "Pennsylvania",
+          "lat": 41.2033,
+          "lng": -77.1945,
+          "cities": []
+        }
+      ]
+    },
+    {
+      "name": "Canada",
+      "continent": "North America",
+      "states": [
+        {
+          "name": "Alberta",
+          "lat": 53.9333,
+          "lng": -116.5765,
+          "cities": []
+        },
+        {
+          "name": "British Columbia",
+          "lat": 53.7267,
+          "lng": -127.6476,
+          "cities": []
+        }
+      ]
+    },
+    {
+      "name": "United Kingdom",
+      "continent": "Europe",
+      "states": [
+        {
+          "name": "England",
+          "lat": 51.5074,
+          "lng": -0.1278,
+          "cities": []
+        },
+        {
+          "name": "Scotland",
+          "lat": 56.4907,
+          "lng": -4.2026,
+          "cities": []
+        },
+        {
+          "name": "Cambridge",
+          "lat": 52.2053,
+          "lng": 0.1218,
+          "cities": []
+        },
+        {
+          "name": "Oxford",
+          "lat": 51.7520,
+          "lng": -1.2577,
+          "cities": []
+        },
+        {
+          "name": "Lake District",
+          "lat": 54.4609,
+          "lng": -3.0886,
+          "cities": []
+        },
+        {
+          "name": "York",
+          "lat": 53.9600,
+          "lng": -1.0873,
+          "cities": []
+        },
+        {
+          "name": "Isle of Skye",
+          "lat": 57.2736,
+          "lng": -6.2155,
+          "cities": []
+        },
+        {
+          "name": "Brighton",
+          "lat": 50.8225,
+          "lng": -0.1372,
+          "cities": []
+        },
+        {
+          "name": "Dover",
+          "lat": 51.1279,
+          "lng": 1.3134,
+          "cities": []
+        },
+        {
+          "name": "Exeter",
+          "lat": 50.7184,
+          "lng": -3.5339,
+          "cities": []
+        },
+        {
+          "name": "Cornwall",
+          "lat": 50.2660,
+          "lng": -5.0527,
+          "cities": []
+        },
+        {
+          "name": "Glasgow",
+          "lat": 55.8642,
+          "lng": -4.2518,
+          "cities": []
+        },
+        {
+          "name": "Edinburgh",
+          "lat": 55.9533,
+          "lng": -3.1883,
+          "cities": []
+        }
+      ]
+    },
+    {
+      "name": "Norway",
+      "continent": "Europe",
+      "states": [
+        {
+          "name": "Tromsø",
+          "lat": 69.6492,
+          "lng": 18.9553,
+          "cities": []
+        }
+      ]
+    },
+    {
+      "name": "Spain",
+      "continent": "Europe",
+      "states": [
+        {
+          "name": "Lanzarote",
+          "lat": 29.0469,
+          "lng": -13.5896,
+          "cities": []
+        }
+      ]
+    },
+    {
+      "name": "Iceland",
+      "continent": "Europe",
+      "states": [
+        {
+          "name": "Iceland",
+          "lat": 64.9631,
+          "lng": -19.0208,
+          "cities": []
+        }
+      ]
+    },
+    {
+      "name": "Denmark",
+      "continent": "Europe",
+      "states": [
+        {
+          "name": "Denmark",
+          "lat": 56.2639,
+          "lng": 9.5018,
+          "cities": []
+        }
+      ]
+    },
+    {
+      "name": "Finland",
+      "continent": "Europe",
+      "states": [
+        {
+          "name": "Finland",
+          "lat": 61.9241,
+          "lng": 25.7482,
+          "cities": []
+        }
+      ]
+    },
+    {
+      "name": "Estonia",
+      "continent": "Europe",
+      "states": [
+        {
+          "name": "Tallinn",
+          "lat": 59.4370,
+          "lng": 24.7536,
+          "cities": []
+        }
+      ]
+    },
+    {
+      "name": "Greece",
+      "continent": "Europe",
+      "states": [
+        {
+          "name": "Athens",
+          "lat": 37.9838,
+          "lng": 23.7275,
+          "cities": []
+        },
+        {
+          "name": "Zakynthos",
+          "lat": 37.7900,
+          "lng": 20.8990,
+          "cities": []
+        },
+        {
+          "name": "Santorini",
+          "lat": 36.3932,
+          "lng": 25.4615,
+          "cities": []
+        }
+      ]
+    },
+    {
+      "name": "Turkey",
+      "continent": "Europe",
+      "states": [
+        {
+          "name": "Cappadocia",
+          "lat": 38.6431,
+          "lng": 34.8331,
+          "cities": []
+        },
+        {
+          "name": "Antalya",
+          "lat": 36.8969,
+          "lng": 30.7133,
+          "cities": []
+        },
+        {
+          "name": "Fethiye",
+          "lat": 36.6220,
+          "lng": 29.1167,
+          "cities": []
+        },
+        {
+          "name": "Istanbul",
+          "lat": 41.0082,
+          "lng": 28.9784,
+          "cities": []
+        }
+      ]
+    },
+    {
+      "name": "Maldives",
+      "continent": "Asia",
+      "states": [
+        {
+          "name": "Maldives",
+          "lat": 3.2028,
+          "lng": 73.2207,
+          "cities": []
+        }
+      ]
+    },
+    {
+      "name": "Singapore",
+      "continent": "Asia",
+      "states": [
+        {
+          "name": "Singapore",
+          "lat": 1.3521,
+          "lng": 103.8198,
+          "cities": []
+        }
+      ]
+    },
+    {
+      "name": "Malaysia",
+      "continent": "Asia",
+      "states": [
+        {
+          "name": "Malaysia",
+          "lat": 4.2105,
+          "lng": 101.9758,
+          "cities": []
+        }
+      ]
+    },
+    {
+      "name": "Thailand",
+      "continent": "Asia",
+      "states": [
+        {
+          "name": "Phuket",
+          "lat": 7.8804,
+          "lng": 98.3923,
+          "cities": []
+        },
+        {
+          "name": "Chiang Mai",
+          "lat": 18.7883,
+          "lng": 98.9853,
+          "cities": []
+        },
+        {
+          "name": "Bangkok",
+          "lat": 13.7563,
+          "lng": 100.5018,
+          "cities": []
+        }
+      ]
+    },
+    {
+      "name": "Indonesia",
+      "continent": "Asia",
+      "states": [
+        {
+          "name": "Bali",
+          "lat": -8.3405,
+          "lng": 115.0920,
+          "cities": []
+        }
+      ]
+    },
+    {
+      "name": "New Zealand",
+      "continent": "Oceania",
+      "states": [
+        {
+          "name": "New Zealand",
+          "lat": -40.9006,
+          "lng": 174.8860,
+          "cities": []
+        }
+      ]
+    },
+    {
+      "name": "Japan",
+      "continent": "Asia",
+      "states": [
+        {
+          "name": "Japan",
+          "lat": 36.2048,
+          "lng": 138.2529,
+          "cities": []
+        }
+      ]
+    },
+    {
+      "name": "South Korea",
+      "continent": "Asia",
+      "states": [
+        {
+          "name": "Seoul",
+          "lat": 37.5665,
+          "lng": 126.9780,
+          "cities": []
+        }
+      ]
+    }
+  ]
+} 

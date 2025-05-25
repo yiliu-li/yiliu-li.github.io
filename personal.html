@@ -15,6 +15,7 @@
     <title>Personal Life - Yiliu (Aiden) Li</title>
     <link rel="icon" type="image/x-icon" href="pics/icon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -45,133 +46,177 @@
         </div>
     </header>
 
-    <!-- 
-    <section id="hobbies" class="section">
-        <h2>Hobbies & Interests</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3><i class="fas fa-camera"></i> Photography</h3>
-                <p>Capturing moments and exploring the world through the lens. Passionate about landscape, street, and portrait photography.</p>
-            </div>
-            <div class="project-card">
-                <h3><i class="fas fa-plane"></i> Travel</h3>
-                <p>Exploring different cultures and places. Always planning the next adventure and collecting memories from around the world.</p>
-            </div>
-            <div class="project-card">
-                <h3><i class="fas fa-music"></i> Music</h3>
-                <p>Enjoying various genres of music and occasionally playing instruments. Music is the soundtrack to life's best moments.</p>
-            </div>
-            <div class="project-card">
-                <h3><i class="fas fa-gamepad"></i> Coffee</h3>
-                <p>Strategic and puzzle games enthusiast. Enjoying both competitive and casual gaming experiences.</p>
-            </div>
-            <div class="project-card">
-                <h3><i class="fas fa-utensils"></i> Cooking</h3>
-                <p>Experimenting with different cuisines and cooking techniques. Food is a way to connect with culture and creativity.</p>
-            </div>
-            <div class="project-card">
-                <h3><i class="fas fa-running"></i> Sports & Fitness</h3>
-                <p>Staying active through various sports and fitness activities. Believing in the balance of mind and body.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="life-philosophy" class="section">
-        <h2>Life Philosophy</h2>
+    <section id="my-journey" class="section">
+        <h2>My Journey</h2>
         <div class="education-card">
             <div class="card-content">
                 <div class="main-content">
-                    <h3>Continuous Learning & Growth</h3>
-                    <p class="degree">Embracing curiosity and lifelong learning</p>
-                    <ul>
-                        <li>Every experience is an opportunity to learn something new</li>
-                        <li>Staying curious about the world and different perspectives</li>
-                        <li>Balancing academic pursuits with personal development</li>
-                        <li>Finding joy in both small moments and big achievements</li>
-                    </ul>
+                    <h3>From Guangdong to London</h3>
+                    <p class="degree">My multicultural journey across continents</p>
+                    
+                    <div class="journey-timeline">
+                        <div class="journey-node">
+                            <div class="location-name">Guangdong, China</div>
+                            <p>Born and raised in Foshan, Guangdong Province - the heart of Cantonese culture where the language originated. My hometown is Meizhou, also in Guangdong. I am deeply connected to the rich cultural heritage of China, Cantonese culture, and the Hakka culture.</p>
+                        </div>
+                        
+                        <div class="journey-node">
+                            <div class="location-name">Shanghai, China</div>
+                            <p>Spent one and a half year of high school in Shanghai, experiencing the eastern chinese culture and the modernity of Shanghai</p>
+                        </div>
+                        
+                        <div class="journey-node">
+                            <div class="location-name">London, UK</div>
+                            <p>Pursued higher education at University College London (UCL), immersing myself in British academic culture and the historical, multicultural environment of one of the world's most famous cities.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="fun-facts" class="section">
-        <h2>Fun Facts</h2>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h3>Random Things About Me</h3>
-                <div class="skill-tags">
-                    <span>Coffee Enthusiast</span>
-                    <span>Night Owl</span>
-                    <span>Puzzle Solver</span>
-                    <span>Tech Gadget Lover</span>
-                    <span>Documentary Watcher</span>
-                    <span>Language Learner</span>
+    <section id="languages" class="section">
+        <h2>Languages</h2>
+        <div class="languages-grid">
+            <div class="language-card">
+                <div class="language-header">
+                    <h3>English</h3>
+                    <span class="proficiency">Professional</span>
                 </div>
+                <p>Spoken from young age, developed while always attending international school</p>
             </div>
-            <div class="skill-category">
-                <h3>Favorite Things</h3>
-                <div class="skill-tags">
-                    <span>Rainy Days</span>
-                    <span>Good Books</span>
-                    <span>Sunset Views</span>
-                    <span>Deep Conversations</span>
-                    <span>New Experiences</span>
-                    <span>Quiet Moments</span>
+            
+            <div class="language-card">
+                <div class="language-header">
+                    <h3>Mandarin</h3>
+                    <span class="proficiency">Professional</span>
+                </div>
+                <p>China's official language, mostly spoken in China, generally recognized as "Chinese"</p>
+            </div>
+            
+            <div class="language-card">
+                <div class="language-header">
+                    <h3>Cantonese</h3>
+                    <span class="proficiency">Professional</span>
+                </div>
+                <p>Originated from Guangdong, commonly spoken in Hong Kong, Macau and overseas Chinese communities</p>
+            </div>
+            
+            <div class="language-card">
+                <div class="language-header">
+                    <h3>Hakka</h3>
+                    <span class="proficiency">Professional</span>
+                </div>
+                <p>Dialect of my hometown Meizhou, Hakka is the third largest Chinese dialect group, also popular in Southeast Asia</p>
+            </div>
+            
+            <div class="language-card">
+                <div class="language-header">
+                    <h3>Shanghainese</h3>
+                    <span class="proficiency">Conversational</span>
+                </div>
+                <p>Learned during my year of high school in Shanghai, although only learned for 1 year</p>
+            </div>
+            
+            <div class="language-card">
+                <div class="language-header">
+                    <h3>Spanish</h3>
+                    <span class="proficiency">Beginner</span>
+                </div>
+                <p>Always wanted to learn but always gave up - very beginner level, but the dream persists</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="education-journey" class="section">
+        <h2>Early Education</h2>
+        <div class="education-card">
+            <div class="card-content">
+                <div class="main-content">
+                    <h3>My School Experience</h3>
+                    <p class="degree">International Education Across China</p>
+                    
+                    <div class="journey-timeline">
+                        <div class="journey-node">
+                            <div class="location-name">Guangdong Country Garden School</div>
+                            <p><strong>Year 1 - Year 5:</strong> Began my primary education with the International Baccalaureate (IB) Primary Years Programme (PYP), which provided a strong foundation in critical thinking and global perspectives.</p>
+                            <p><strong>Year 6 - Year 8:</strong> Completed my middle school education with the International Baccalaureate (IB) Middle Years Programme (MYP).</p>
+                            <p><strong>Year 9 - Year 10:</strong> To prepare for my A Level studies, I took the International General Certificate of Secondary Education (IGCSE) courses in the UK</p>
+                        </div>
+                        
+                        <div class="journey-node">
+                            <div class="location-name">St Bees School, Dongguan</div>
+                            <p><strong>1 Term:</strong> Started my A Level studies with one term of AS Level courses, in a school that has over 440 years of noble heritage as one of England's oldest schools - In the campus in Dongguan, Guangdong Province.</p>
+                        </div>
+                        
+                        <div class="journey-node">
+                            <div class="location-name">Shanghai Guanghua Qidi College</div>
+                            <p><strong>1.5 Years:</strong> Finally completed my A Level studies in Shanghai, preparing for university entrance. </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="bucket-list" class="section">
-        <h2>Bucket List</h2>
-        <div class="timeline">
-            <div class="experience-card">
-                <div class="card-content">
-                    <div class="main-content">
-                        <h3>Travel Goals</h3>
-                        <p class="company">Places I want to visit</p>
-                        <ul>
-                            <li>Northern Lights in Iceland</li>
-                            <li>Cherry blossoms in Japan</li>
-                            <li>Safari in Kenya</li>
-                            <li>Backpacking through Europe</li>
-                        </ul>
+    <section id="travel" class="section">
+        <h2>Places I've Visited</h2>
+        
+        <div class="map-container">
+            <div id="map"></div>
+        </div>
+
+        <div class="travel-content">
+            <div class="places-section">
+                <div class="places-header">
+                    <h3>Destinations by Continent</h3>
+                    <div class="travel-summary">
+                        <div class="summary-item">
+                            <span class="summary-number" id="countryCount">0</span>
+                            <span class="summary-label">Countries</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-number" id="continentCount">0</span>
+                            <span class="summary-label">Continents</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="experience-card">
-                <div class="card-content">
-                    <div class="main-content">
-                        <h3>Personal Challenges</h3>
-                        <p class="company">Things I want to accomplish</p>
-                        <ul>
-                            <li>Learn a new language fluently</li>
-                            <li>Run a marathon</li>
-                            <li>Write a book or blog</li>
-                            <li>Master a musical instrument</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="experience-card">
-                <div class="card-content">
-                    <div class="main-content">
-                        <h3>Creative Projects</h3>
-                        <p class="company">Artistic and creative pursuits</p>
-                        <ul>
-                            <li>Photography exhibition</li>
-                            <li>Short film creation</li>
-                            <li>Learn digital art</li>
-                            <li>Build something with my hands</li>
-                        </ul>
-                    </div>
-                </div>
+                <div class="places-container" id="placesList"></div>
             </div>
         </div>
     </section>
-    -->
+    
+
+
+    <section id="hobbies" class="section">
+        <h2>Interests & Hobbies</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Photography</h3>
+                <p>I am interested in landscape, street, portrait photography, and film photography. I have experienced professional film photography in my friend's studio. I love capturing the world with my EOS R5, ZVE-10, and DJI Mavic 2.</p>
+            </div>
+            <div class="project-card">
+                <h3>Travel</h3>
+                <p>I love to travel, I travel around the world every year, and I love to explore different cultures and places. I love to travel with my family and friends.</p>
+            </div>
+            <div class="project-card">
+                <h3>Music</h3>
+                <p>I enjoy various genres of music and occasionally play instruments. I enjoy jazz, R&B, and pop music, I love to sing and play guitar, and I have two band experiences during my middle school.</p>
+            </div>
+            <div class="project-card">
+                <h3>Coffee</h3>
+                <p>Coffee enthusiast exploring different brewing methods and flavors. I have obtained my CSP Barista Skills-Foundation certificate from the Specialty Coffee Association (SCA) in London.</p>
+            </div>
+            <div class="project-card">
+                <h3>Cooking</h3>
+                <p>I love to cook, I love to eat, I love to experiment with different cuisines and cooking techniques from east to west. No truffles please.</p>
+            </div>
+            <div class="project-card">
+                <h3>Sports & Fitness</h3>
+                <p>I love to play soccer, badminton, karting, and swimming. I also love to play basketball and table tennis, but I am not very good at it.</p>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <p>&copy; 2025 Yiliu (Aiden) Li. All rights reserved.</p>
@@ -179,5 +224,264 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <script>
+        let countries = [];
+        let map;
+        let markers = [];
+
+        // Load places data from JSON file
+        async function loadPlacesData() {
+            try {
+                const response = await fetch('places-data.json');
+                const data = await response.json();
+                countries = data.countries;
+                return true;
+            } catch (error) {
+                console.error('Error loading places data:', error);
+                return false;
+            }
+        }
+
+        async function initializeMap() {
+            // Load places data first
+            const dataLoaded = await loadPlacesData();
+            if (!dataLoaded) {
+                console.error('Failed to load places data');
+                return;
+            }
+
+            // Initialize map
+            map = L.map('map', {
+                zoomControl: false,
+                attributionControl: false,
+                minZoom: 2,
+                maxZoom: 10
+            }).setView([20, 0], 2);
+
+            // Add grey tile layer with labels
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+                attribution: '',
+                maxZoom: 10,
+                subdomains: 'abcd'
+            }).addTo(map);
+
+            // Add markers
+            addMarkers();
+
+            // Calculate and display stats
+            updateStats();
+
+            // Create places list
+            createPlacesList();
+        }
+
+        function addMarkers() {
+            let markerIndex = 0;
+            
+            countries.forEach((country, countryIndex) => {
+                country.states.forEach((state, stateIndex) => {
+                    const icon = L.divIcon({
+                        className: 'custom-marker',
+                        iconSize: [12, 12],
+                        iconAnchor: [6, 6]
+                    });
+
+                    const locationInfo = `<strong>${state.name}</strong><br>${country.name}`;
+                    
+                    const marker = L.marker([state.lat, state.lng], { icon })
+                        .addTo(map)
+                        .bindPopup(locationInfo, {
+                            closeButton: false,
+                            offset: [0, -5]
+                        });
+
+                    marker.countryIndex = countryIndex;
+                    marker.stateIndex = stateIndex;
+                    marker.markerIndex = markerIndex;
+                    
+                    marker.on('click', () => {
+                        selectState(countryIndex, stateIndex);
+                    });
+
+                    markers.push(marker);
+                    markerIndex++;
+                });
+            });
+
+            // Fit map to show all markers
+            if (markers.length > 0) {
+                const group = new L.featureGroup(markers);
+                map.fitBounds(group.getBounds().pad(0.1));
+            }
+        }
+
+        function selectState(countryIndex, stateIndex) {
+            // Remove active class from all elements
+            document.querySelectorAll('.place-tag, .single-country-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Add active class to selected element
+            const selectedElement = document.querySelector(`[data-country="${countryIndex}"][data-state="${stateIndex}"]`);
+            if (selectedElement) {
+                selectedElement.classList.add('active');
+            }
+            
+            // Center map on selected state
+            const state = countries[countryIndex].states[stateIndex];
+            map.setView([state.lat, state.lng], 6);
+            
+            // Find and open the corresponding marker popup
+            const marker = markers.find(m => m.countryIndex === countryIndex && m.stateIndex === stateIndex);
+            if (marker) {
+                marker.openPopup();
+            }
+        }
+
+        function updateStats() {
+            const continents = [...new Set(countries.map(c => c.continent))];
+            const totalPlaces = countries.reduce((sum, country) => sum + country.states.length, 0);
+            
+            document.getElementById('countryCount').textContent = countries.length;
+            document.getElementById('continentCount').textContent = continents.length;
+        }
+
+        function createPlacesList() {
+            const placesList = document.getElementById('placesList');
+            placesList.innerHTML = ''; // Clear existing content
+            
+            // Group countries by continent
+            const continentGroups = {};
+            countries.forEach(country => {
+                if (!continentGroups[country.continent]) {
+                    continentGroups[country.continent] = [];
+                }
+                continentGroups[country.continent].push(country);
+            });
+            
+            // Create continent sections
+            Object.entries(continentGroups).forEach(([continentName, continentCountries]) => {
+                createContinentSection(continentName, continentCountries, placesList);
+            });
+        }
+
+        function createContinentSection(continentName, continentCountries, placesList) {
+            // Create continent section
+            const continentSection = document.createElement('div');
+            continentSection.className = 'country-section';
+            
+            // Create continent header
+            const continentHeader = document.createElement('button');
+            continentHeader.className = 'country-header'; // Remove 'expanded' class for collapsed default
+            continentHeader.innerHTML = `
+                <div class="country-info">
+                    <h3 class="country-name">${continentName} <span class="country-count">${continentCountries.length}</span></h3>
+                </div>
+                <span class="expand-icon">▼</span>
+            `;
+            
+            // Create countries container
+            const countriesContainer = document.createElement('div');
+            countriesContainer.className = 'states-container';
+            
+            // Populate countries
+            continentCountries.forEach(country => {
+                const actualCountryIndex = countries.indexOf(country);
+                createCountryItem(country, actualCountryIndex, countriesContainer);
+            });
+            
+            // Set initial state (collapsed by default)
+            // No setTimeout needed since we want it collapsed
+            
+            // Add click handler for toggle
+            continentHeader.addEventListener('click', () => {
+                toggleContinent(continentHeader, countriesContainer);
+            });
+            
+            continentSection.appendChild(continentHeader);
+            continentSection.appendChild(countriesContainer);
+            placesList.appendChild(continentSection);
+        }
+
+        function createCountryItem(country, actualCountryIndex, container) {
+            const hasMultiplePlaces = country.states.length > 1 || 
+                (country.states.length === 1 && country.states[0].name !== country.name);
+            
+            if (hasMultiplePlaces) {
+                // Country with multiple places
+                const countryItem = document.createElement('div');
+                countryItem.className = 'country-item';
+                
+                const placesGrid = country.states.map((state, stateIndex) => 
+                    `<div class="place-tag" data-country="${actualCountryIndex}" data-state="${stateIndex}">
+                        ${state.name}
+                    </div>`
+                ).join('');
+                
+                countryItem.innerHTML = `
+                    <div class="country-content">
+                        <h4 class="country-title">${country.name}</h4>
+                        <div class="places-grid">
+                            ${placesGrid}
+                        </div>
+                    </div>
+                `;
+                
+                // Add click handlers to place tags
+                countryItem.querySelectorAll('.place-tag').forEach(tag => {
+                    tag.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        const countryIdx = parseInt(tag.dataset.country);
+                        const stateIdx = parseInt(tag.dataset.state);
+                        selectState(countryIdx, stateIdx);
+                    });
+                });
+                
+                container.appendChild(countryItem);
+            } else {
+                // Single country/place
+                const countryItem = document.createElement('div');
+                countryItem.className = 'single-country-item';
+                countryItem.dataset.country = actualCountryIndex;
+                countryItem.dataset.state = 0;
+                
+                countryItem.innerHTML = `
+                    <div class="country-content">
+                        <h4 class="country-title">${country.name}</h4>
+                    </div>
+                `;
+                
+                countryItem.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    selectState(actualCountryIndex, 0);
+                });
+                
+                container.appendChild(countryItem);
+            }
+        }
+
+        function toggleContinent(header, container) {
+            const isExpanded = header.classList.contains('expanded');
+            
+            if (isExpanded) {
+                // Collapse
+                header.classList.remove('expanded');
+                container.style.maxHeight = '0';
+                container.style.opacity = '0';
+            } else {
+                // Expand
+                header.classList.add('expanded');
+                container.style.maxHeight = container.scrollHeight + 'px';
+                container.style.opacity = '1';
+            }
+        }
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Small delay to ensure all elements are loaded
+            setTimeout(initializeMap, 100);
+        });
+    </script>
 </body>
-</html> 
+</html>
