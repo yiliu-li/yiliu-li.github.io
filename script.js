@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Optimized Card Hover Effect with debounce
     const setupCardHoverEffect = () => {
         // Removed mouse tracking effect
-        const cards = document.querySelectorAll('.education-card, .experience-card, .project-card, .skill-category');
+        const cards = document.querySelectorAll('.education-card, .experience-card, .project-card, .publication-card, .skill-category');
         // Keep the fade effect only, no cursor tracking
     };
 
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }, options);
 
-        document.querySelectorAll('.education-card, .experience-card, .project-card, .skill-category')
+        document.querySelectorAll('.education-card, .experience-card, .project-card, .publication-card, .skill-category')
             .forEach(element => observer.observe(element));
     };
 
@@ -260,4 +260,4 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }, 150);
     }, { passive: true });
-}); 
+});
