@@ -24,34 +24,22 @@ document.addEventListener('DOMContentLoaded', () => {
         // Keep the fade effect only, no cursor tracking
     };
 
-    // Enhanced Intersection Observer for Fade In
+    // Simplified Intersection Observer for Reveal
     const setupIntersectionObserver = () => {
         const options = {
-            root: null,
-            rootMargin: '0px',
-            threshold: [0, 0.1, 0.2, 0.3]
+            threshold: 0.1
         };
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    // Calculate opacity based on intersection ratio
-                    const opacity = Math.min(entry.intersectionRatio * 3, 1);
-                    entry.target.style.opacity = opacity;
-                    
-                    if (entry.intersectionRatio > 0.2) {
-                        entry.target.classList.add('fade-in');
-                        // Only unobserve if fully visible
-                        if (entry.intersectionRatio > 0.9) {
-                            observer.unobserve(entry.target);
-                        }
-                    }
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
                 }
             });
         }, options);
 
-        document.querySelectorAll('.education-card, .experience-card, .project-card, .publication-card, .skill-category')
-            .forEach(element => observer.observe(element));
+        document.querySelectorAll('.section').forEach(element => observer.observe(element));
     };
 
     // Optimized Mobile Menu
@@ -99,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    const headerOffset = 80;
+                    const headerOffset = 70;
                     const elementPosition = target.getBoundingClientRect().top;
                     const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -230,6 +218,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
+    // News Expansion Toggle
+    const setupNewsExpansion = () => {
+        const toggleBtn = document.querySelector('.news-toggle');
+        const expandable = document.querySelector('.news-expandable');
+        
+        if (!toggleBtn || !expandable) return;
+
+        toggleBtn.addEventListener('click', () => {
+            const isExpanded = expandable.classList.toggle('expanded');
+            toggleBtn.textContent = isExpanded ? 'Show Less' : 'More News';
+        });
+    };
+
     // Initialize all features
     createScrollProgress();
     setupCardHoverEffect();
@@ -240,6 +241,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupSkillTags();
     setupContactLinks();
     setupMobileMenu();
+    setupNewsExpansion();
 
     // Optimized window resize handler
     let resizeTimer;
