@@ -19,7 +19,8 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navbar">
+    <div class="page-wrapper">
+        <nav class="navbar">
         <div class="nav-content">
             <div class="logo" onclick="window.location.href='index.html'">李</div>
             <div class="hamburger">
@@ -36,8 +37,9 @@
             </ul>
         </div>
     </nav>
-
-    <header class="hero" id="about">
+        
+        <main class="main-content">
+            <header class="hero" id="about">
         <div class="hero-content" style="grid-column: 1 / -1;">
             <h1>Personal Life & Interests</h1>
             <p class="subtitle">Beyond Academics: Life, Interests & Adventures</p>
@@ -222,10 +224,12 @@
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2025 <strong>Aiden (Yiliu) Li</strong>. All rights reserved.</p>
-        <p class="last-updated">Last updated: February 2026</p>
-    </footer>
+            <footer>
+                <p>&copy; 2025 <strong>Aiden (Yiliu) Li</strong>. All rights reserved.</p>
+                <p class="last-updated">Last updated: February 2026</p>
+            </footer>
+        </main>
+    </div>
 
     <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>

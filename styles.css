@@ -26,8 +26,9 @@
     
     /* Layout */
     --sidebar-width: 200px;
-    --container-width: 800px;
+    --container-width: 900px;
     --header-height: 60px;
+    --page-max-width: 1200px;
     
     /* Typography */
     --font-heading: 'Crimson Pro', serif;
@@ -191,30 +192,41 @@ p {
 }
 
 /* Layout Utilities */
+.page-wrapper {
+    display: flex;
+    max-width: var(--page-max-width);
+    margin: 0 auto;
+    position: relative;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+    border-left: 1px solid var(--border-soft);
+}
+
 .section {
-    padding: var(--spacing-lg) 1.5rem;
+    padding: var(--spacing-lg) 4rem;
     max-width: var(--container-width);
-    margin-left: calc(var(--sidebar-width) + 2rem);
 }
 
 /* Navbar - Vertical Sidebar */
 .navbar {
-    position: fixed;
+    position: sticky;
     top: 0;
-    left: 0;
     width: var(--sidebar-width);
     height: 100vh;
     z-index: 1000;
-    padding: 4rem 2.5rem;
+    padding: 4rem 2rem;
     background: var(--bg-color);
-    border-right: 1px solid var(--border-soft);
     transition: var(--transition-base);
+    flex-shrink: 0;
 }
 
 .navbar.scroll-down, .navbar.scroll-up {
     transform: none;
-    padding: 4rem 2.5rem;
-    border-bottom: none;
+    padding: 4rem 2rem;
 }
 
 .nav-content {
@@ -255,9 +267,8 @@ p {
 
 /* Hero Section */
 .hero {
-    padding: var(--spacing-xl) 1.5rem var(--spacing-lg);
+    padding: var(--spacing-xl) 4rem var(--spacing-lg);
     max-width: var(--container-width);
-    margin-left: calc(var(--sidebar-width) + 2rem);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -977,10 +988,10 @@ p {
 footer {
     text-align: center;
     padding: var(--spacing-lg) 0;
-    margin-left: var(--sidebar-width);
     color: var(--text-tertiary);
     font-size: 0.8rem;
     letter-spacing: 0.05em;
+    border-top: 1px solid var(--border-soft);
 }
 
 /* Animations */
@@ -1065,9 +1076,18 @@ footer {
     .hamburger.active span:last-child { transform: rotate(-45deg) translate(4px, -4px); }
 
     /* Reset content offset */
+    .page-wrapper {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .main-content {
+        border-left: none;
+    }
+
     .hero, .section {
-        margin-left: 0;
-        padding-top: 6rem;
+        padding: 6rem 1.5rem 2rem;
+        max-width: 100%;
     }
 
     footer {
