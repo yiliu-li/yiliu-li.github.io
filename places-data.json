@@ -333,6 +333,18 @@
           "lat": 48.1351,
           "lng": 11.5820,
           "cities": []
+        },
+        {
+          "name": "Neuschwanstein Castle",
+          "lat": 47.5576,
+          "lng": 10.7498,
+          "cities": []
+        },
+        {
+          "name": "Konigssee",
+          "lat": 47.5937,
+          "lng": 12.9870,
+          "cities": []
         }
       ]
     },
@@ -344,6 +356,24 @@
           "name": "Faro",
           "lat": 37.0179,
           "lng": -7.9308,
+          "cities": []
+        },
+        {
+          "name": "Lisbon",
+          "lat": 38.7223,
+          "lng": -9.1393,
+          "cities": []
+        }
+      ]
+    },
+    {
+      "name": "France",
+      "continent": "Europe",
+      "states": [
+        {
+          "name": "Paris",
+          "lat": 48.8566,
+          "lng": 2.3522,
           "cities": []
         }
       ]
