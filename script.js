@@ -227,7 +227,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
         toggleBtn.addEventListener('click', () => {
             const isExpanded = expandable.classList.toggle('expanded');
-            toggleBtn.textContent = isExpanded ? 'Show Less' : 'More News';
+            toggleBtn.querySelector('.toggle-label').textContent = isExpanded ? 'Show Less' : 'More News';
+            toggleBtn.setAttribute('aria-expanded', String(isExpanded));
+        });
+    };
+
+    // Publications and Projects Expansion Toggles
+    const setupContentExpansions = () => {
+        document.querySelectorAll('.content-toggle').forEach(toggleBtn => {
+            const target = document.getElementById(toggleBtn.dataset.target);
+            if (!target) return;
+
+            toggleBtn.addEventListener('click', () => {
+                const isExpanded = target.classList.toggle('expanded');
+                const label = toggleBtn.dataset.label;
+                toggleBtn.querySelector('.toggle-label').textContent = isExpanded ? `Show Less ${label}` : `More ${label}`;
+                toggleBtn.setAttribute('aria-expanded', String(isExpanded));
+            });
         });
     };
 
@@ -242,6 +258,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupContactLinks();
     setupMobileMenu();
     setupNewsExpansion();
+    setupContentExpansions();
 
     // Optimized window resize handler
     let resizeTimer;
