@@ -736,7 +736,8 @@ p {
     color: var(--text-primary);
 }
 
-.contribution-mark {
+.contribution-mark,
+.corresponding-mark {
     margin-left: 0.08em;
     color: var(--text-tertiary);
     font-size: 0.68em;
