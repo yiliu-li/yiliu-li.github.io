@@ -736,6 +736,18 @@ p {
     color: var(--text-primary);
 }
 
+.contribution-mark {
+    margin-left: 0.08em;
+    color: var(--text-tertiary);
+    font-size: 0.68em;
+    line-height: 0;
+    vertical-align: super;
+}
+
+.contribution-note {
+    margin-top: -0.1rem;
+}
+
 .venue {
     font-size: 0.95rem;
     font-style: italic;
